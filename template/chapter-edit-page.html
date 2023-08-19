@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/chapter-edit-page.css">
+  <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="../lib/datepicker/daterangepicker.css">
+  <script type="text/javascript" src="../lib/jquery/jquery-3.7.0.js"></script>
+  <script type="text/javascript" src="../lib/datepicker/moment.min.js"></script>
+  <script type="text/javascript" src="..lib/datepicker/daterangepicker.js"></script>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+  <title>Document</title>
+</head>
+
+<body class="d-flex">
+  <sidebar-component></sidebar-component>
+
+  <div class="content ">
+    <div class="container py-4 gap-4 content d-flex flex-column">
+      <div class="greeting-container d-flex gap-2 justify-content-end align-items-center w-100">
+        <div class="greeting ">
+          <span>Hello,</span>
+          <br>
+          <span id="username">ชรินดา สนธิดี </span>
+        </div>
+        <img class="avatar-img" src="../public/imgs/avatar-placeholder.jfif" alt="avatar">
+      </div>
+
+      <nav class="w-100 bg-transparent p-0" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+        <ol class="breadcrumb m-0">
+          <li class="breadcrumb-item"><a class="bci" href="#">My Groups</a></li>
+          <li class="breadcrumb-item"><a class="bci" href="#">Test</a></li>
+          <li class="breadcrumb-item"><a class="bci" href="#">Test</a></li>
+        </ol>
+      </nav>
+      <section>
+        <h5 class="d-flex align-items-center gap-3">
+          <img src="../public/imgs/chart-logo.png" alt="chart-logo">
+          Variables Expression Statement
+        </h5>
+        <div class="row gx-2 ">
+          <div class="row col-12 p-2 dateborder">
+            <div class="col-6  ">
+              <img src="../public/imgs/checkmark.png" alt="checkmark">
+              Allow access exercise<br>
+              <span class="datefont pt-2">Start date - End date</span>
+              <div class="dateinput">
+                <input type="text" name="datefilter" value="" placeholder="mm/dd/yyyy - mm/dd/yyyy" />
+              </div>
+              <script type="text/javascript">
+                $(function () {
+
+                  $('input[name="datefilter"]').daterangepicker({
+                    autoUpdateInput: false,
+                    locale: {
+                      cancelLabel: 'Clear'
+                    }
+                  });
+
+                  $('input[name="datefilter"]').on('apply.daterangepicker', function (ev, picker) {
+                    $(this).val(picker.startDate.format('MM/DD/YYYY') + ' - ' + picker.endDate.format('MM/DD/YYYY'));
+                  });
+
+                  $('input[name="datefilter"]').on('cancel.daterangepicker', function (ev, picker) {
+                    $(this).val('');
+                  });
+
+                });
+              </script>
+            </div>
+            <div class="col-6  ">
+              <img src="../public/imgs/checkmark.png" alt="checkmark">
+              Allow access exercise<br>
+              <span class="datefont pt-2">Start date - End date</span>
+              <div class="dateinput">
+                <input type="text" name="datefilter" value="" placeholder="mm/dd/yyyy - mm/dd/yyyy" />
+              </div>
+              <script type="text/javascript">
+                $(function () {
+
+                  $('input[name="datefilter"]').daterangepicker({
+                    autoUpdateInput: false,
+                    locale: {
+                      cancelLabel: 'Clear'
+                    }
+                  });
+
+                  $('input[name="datefilter"]').on('apply.daterangepicker', function (ev, picker) {
+                    $(this).val(picker.startDate.format('MM/DD/YYYY') + ' - ' + picker.endDate.format('MM/DD/YYYY'));
+                  });
+
+                  $('input[name="datefilter"]').on('cancel.daterangepicker', function (ev, picker) {
+                    $(this).val('');
+                  });
+
+                });
+              </script>
+            </div>
+            <div class="justify-content-end d-flex gap-1 pt-2">
+              <button class="btn btn-primary" id="saveButton">Save</button>
+            </div>
+          </div>
+        </div>
+        <div class="row gx-2">
+          <div class="col-6 mt-2  ">
+            <div class=" editchapter px-2 pb-2">
+              <p>Level 1 - Basic</p>
+              <div class="justify-content-end gap-1 d-flex">
+                <!-- Add the update button -->
+                <button class="btn-common" id="updateButton">Update</button>
+                <!-- Add the edit button with the icon -->
+                <button class="btn-addlab" id="editButton">
+                  <img src="../public/imgs/add.png" alt="Edit Icon">
+                  Add Lab
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 mt-2 ">
+            <div class=" editchapter px-2 pb-2">
+              <p>Level 1 - Basic</p>
+              <div class="justify-content-end d-flex gap-1">
+                <!-- Add the update button -->
+                <button class="btn-common" id="updateButton">Update</button>
+                <!-- Add the edit button with the icon -->
+                <button class="btn-addlab" id="editButton">
+                  <img src="../public/imgs/add.png" alt="Edit Icon">
+                  Add Lab
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 mt-2  ">
+            <div class=" editchapter px-2 pb-2">
+              <p>Level 1 - Basic</p>
+              <div class="justify-content-end d-flex gap-1">
+                <!-- Add the update button -->
+                <button class="btn btn-primary" id="updateButton">Update</button>
+                <!-- Add the edit button with the icon -->
+                <button class="btn-addlab" id="editButton">
+                  <img src="../public/imgs/add.png" alt="Edit Icon">
+                  Add Lab
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 mt-2  ">
+            <div class=" editchapter px-2 pb-2">
+              <p>Level 1 - Basic</p>
+              <div class="justify-content-end d-flex gap-1">
+                <!-- Add the update button -->
+                <button class="btn btn-primary" id="updateButton">Update</button>
+                <!-- Add the edit button with the icon -->
+                <button class="btn-addlab" id="editButton">
+                  <img src="../public/imgs/add.png" alt="Edit Icon">
+                  Add Lab
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 mt-2  ">
+            <div class=" editchapter px-2 pb-2">
+              <p>Level 1 - Basic</p>
+              <div class="justify-content-end d-flex gap-1">
+                <!-- Add the update button -->
+                <button class="btn btn-primary" id="updateButton">Update</button>
+                <!-- Add the edit button with the icon -->
+                <button class="btn-addlab" id="editButton">
+                  <img src="../public/imgs/add.png" alt="Edit Icon">
+                  Add Lab
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- <div class="container">
+            <div class="row" id="contentRow">
+            </div>
+          </div>
+
+          <script>
+            // Get a reference to the container where the content will be added
+            const contentContainer = document.getElementById('contentRow');
+
+            // Loop to generate the HTML structure five times
+            for (let i = 0; i < 5; i++) {
+              // Create the main container div
+              const mainDiv = document.createElement('div');
+              mainDiv.className = 'col-6 editchapter mt-2';
+
+              // Create the <p> element
+              const paragraph = document.createElement('p');
+              paragraph.textContent = 'Level ' + (i + 1) + ' - Basic'; // Replaced "1" with (i + 1)
+
+              // Create the inner container div
+              const innerDiv = document.createElement('div');
+              innerDiv.className = 'justify-content-end d-flex';
+
+              // Create the update button
+              const updateButton = document.createElement('button');
+              updateButton.className = 'btn btn-success';
+              updateButton.textContent = 'Update';
+              updateButton.id = 'updateButton' + i;
+
+              // Create the edit button
+              const editButton = document.createElement('button');
+              editButton.className = 'btn btn-primary';
+              editButton.id = 'editButton' + i;
+
+              // Create the <img> element for the icon
+              const iconImage = document.createElement('img');
+              iconImage.src = '../public/imgs/plus.png';
+              iconImage.alt = 'Edit Icon';
+
+              // Append elements to their respective containers
+              editButton.appendChild(iconImage);
+              innerDiv.appendChild(updateButton);
+              innerDiv.appendChild(editButton);
+              mainDiv.appendChild(paragraph);
+              mainDiv.appendChild(innerDiv);
+
+              // Append the main container to the content container
+              contentContainer.appendChild(mainDiv);
+            }
+          </script> -->
+    </div>
+    </section>
+    <!-- <div class="container borderb ">
+        <div class="row gx-2">
+          <div class="col-6">
+            <div class="p-3 border bg-light"></div>
+          </div>
+          <div class="col-6">
+            <div class="p-3 border bg-light"></div>
+          </div>
+        </div>
+      </div> -->
+
+  </div>
+  </div>
+  <script src="../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../components/SidebarComponent.js"></script>
+</body>
+
+</html>

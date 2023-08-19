@@ -1,0 +1,44 @@
+.datefont{
+  color: #C9CACF;
+  font-family: Be Vietnam Pro;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.editchapter{
+  padding-top: 1rem;
+  border-radius: 0.5rem;
+  /*background: var(--bgbox, rgba(25, 44, 91, 0.50));*/
+  background-color: rgba(25, 44, 91, 0.50);
+}
+.dateinput input{
+  background-color: #0F1729;
+  border: 1px solid #737984;
+  color: white;
+  border-radius: 0.5rem;
+  width: 100%;
+  padding-left: 1rem;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.dateborder{
+  border-radius: 0.5rem;
+  border: 1px solid #202739;
+  backdrop-filter: blur(2px);
+  
+}
+.btn-addlab{
+  border-radius: 0.5rem;
+  border: 1px solid #0CA6E9;
+  background: #1D283A;
+  color: #0CA6E9;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.btn-common{
+  
+}
+.content{
+  color: white;
+}

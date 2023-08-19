@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/ins-group-list.css">
+  <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css">
+  <title>CE-PLMS</title>
+</head>
+
+<body class="d-flex">
+  <div onclick="closeDropdown()" class="backdrop"></div>
+  <sidebar-component></sidebar-component>
+
+  <div class="content">
+    <div class="container py-4 gap-4 content d-flex flex-column">
+      <div class="greeting-container d-flex gap-2 justify-content-end align-items-center w-100">
+        <div class="greeting ">
+          <span>Hello,</span>
+          <br>
+          <span id="username">ชรินดา สนธิดี</span>
+        </div>
+        <img class="avatar-img" src="../public/imgs/avatar-placeholder.jfif" alt="avatar">
+      </div>
+
+      <nav class="w-100 bg-transparent p-0" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+        <ol class="breadcrumb m-0">
+          <li class="breadcrumb-item"><a class="bci" href="#">My Groups</a></li>
+          <li class="breadcrumb-item"><a class="bci" href="#">Test</a></li>
+        </ol>
+      </nav>
+
+      <section class="d-flex flex-column gap-2">
+        <h5 class="d-flex align-items-center gap-3">
+          <img src="../public/imgs/chart-logo.png" alt="chart-logo">
+          My Groups
+        </h5>
+
+        <div class="group-table">
+          <!-- Header -->
+          <div class="table-head">
+            <div class="c1 table-header">Group class</div>
+            <div class="c2 table-header">Group</div>
+            <div class="c3 table-header">Year</div>
+            <div class="c4 table-header arrow dropdown-container">
+              <div onclick="toggleDropdown('semester-dropdown-list')" class="d-flex justify-content-center w-100 h-100">
+                <div class="toggler">
+                  <div>
+                    Semester
+                  </div>
+                  <div>
+                    <img src="../public/imgs/up-down-arrow.png" alt="" srcset="">
+                  </div>
+                </div>
+              </div>
+              <div id="semester-dropdown-list" class="dropdown-content">
+                <div>
+                  <input id="semester-all" type="checkbox" name="semester" value="all" />
+                  <label for="semester-all">All</label>
+                </div>
+                <div>
+                  <input id="semester-1" type="checkbox" name="semester" value="1" />
+                  <label for="semester-1">1</label>
+                </div>
+                <div>
+                  <input id="semester-2" type="checkbox" name="semester" value="2" />
+                  <label for="semester-2">2</label>
+                </div>
+              </div>
+            </div>
+            <div class="c5 table-header arrow dropdown-container">
+              <div onclick="toggleDropdown('class-date-dropdown-list');"
+                class="d-flex justify-content-center w-100 h-100">
+                <div class="toggler">
+                  <div>
+                    Class date
+                  </div>
+                  <div>
+                    <img src="../public/imgs/up-down-arrow.png" alt="" srcset="">
+                  </div>
+                </div>
+              </div>
+              <div id="class-date-dropdown-list" class="dropdown-content">
+                <div>
+                  <input id="class-date-all" type="checkbox" name="class-date" value="all" />
+                  <label for="class-date-all">All</label>
+                </div>
+                <div>
+                  <input id="class-date-monday" type="checkbox" name="class-date" value="monday" />
+                  <label for="class-date-monday">จันทร์</label>
+                </div>
+                <div>
+                  <input id="class-date-tuesday" type="checkbox" name="class-date" value="tuesday" />
+                  <label for="class-date-tuesday">อังคาร</label>
+                </div>
+                <div>
+                  <input id="class-date-wednesday" type="checkbox" name="class-date" value="wednesday" />
+                  <label for="class-date-wednesday">พุธ</label>
+                </div>
+                <div>
+                  <input id="class-date-thursday" type="checkbox" name="class-date" value="thursday" />
+                  <label for="class-date-thursday">พฤหัสบดี</label>
+                </div>
+                <div>
+                  <input id="class-date-friday" type="checkbox" name="class-date" value="friday" />
+                  <label for="class-date-friday">ศุกร์</label>
+                </div>
+                <div>
+                  <input id="class-date-saturday" type="checkbox" name="class-date" value="saturday" />
+                  <label for="class-date-saturday">เสาร์</label>
+                </div>
+                <div>
+                  <input id="class-date-sunday" type="checkbox" name="class-date" value="sunday" />
+                  <label for="class-date-sunday">เสาร์</label>
+                </div>
+              </div>
+            </div>
+            <div class="c6 table-header">Students</div>
+            <div class="c7 table-header">Instructor</div>
+          </div>
+
+          <!-- Data -->
+          <div id="group-list">
+            <table-row group-id="22020401" group="401" year="2022" semester="1" class-date="เสาร์, 09:00:00 - 12:00:00"
+              students="45" instructor="ชรินดา สนธิดี">
+            </table-row>
+            <table-row group-id="22020402" group="402" year="2022" semester="1" class-date="จันทร์, 09:00:00 - 12:00:00"
+              students="45" instructor="ชรินดา สนธิดี">
+            </table-row>
+            <table-row group-id="22020403" group="403" year="2022" semester="1" class-date="พุธ, 09:00:00 - 12:00:00"
+              students="45" instructor="ชรินดา สนธิดี">
+            </table-row>
+          </div>
+
+        </div>
+
+      </section>
+
+    </div>
+  </div>
+
+  <script src="../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../components/SidebarComponent.js"></script>
+  <script src="../js/ins-group-list.js"></script>
+  <script src="../components/TableRow.js"></script>
+</body>
+
+</html>
