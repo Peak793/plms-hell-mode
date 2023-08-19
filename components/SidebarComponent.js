@@ -83,7 +83,7 @@ class SidebarComponent extends HTMLElement {
                               PROGRAMMING LAB <br> MANAGEMENT SYSTEM
                           </p>
                       </div>
-                      <button class="reset-default-btn close-btn">
+                      <button class="reset-default-btn close-btn" aria-label="Close" >
                           <img src="../public/imgs/close-btn.png" alt="">
                       </button>
                   </div>

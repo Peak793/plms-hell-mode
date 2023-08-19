@@ -55,20 +55,11 @@
                   </div>
                 </div>
               </div>
-              <div id="semester-dropdown-list" class="dropdown-content">
-                <div>
-                  <input id="semester-all" type="checkbox" name="semester" value="all" />
-                  <label for="semester-all">All</label>
-                </div>
-                <div>
-                  <input id="semester-1" type="checkbox" name="semester" value="1" />
-                  <label for="semester-1">1</label>
-                </div>
-                <div>
-                  <input id="semester-2" type="checkbox" name="semester" value="2" />
-                  <label for="semester-2">2</label>
-                </div>
-              </div>
+              <form aria-label="semester" id="semester-dropdown-list" class="dropdown-content">
+                <checkbox-component label="All" name="semester" value="all"></checkbox-component>
+                <checkbox-component label="1" name="semester" value="1"></checkbox-component>
+                <checkbox-component label="2" name="semester" value="2"></checkbox-component>
+              </form>
             </div>
             <div class="c5 table-header arrow dropdown-container">
               <div onclick="toggleDropdown('class-date-dropdown-list');"
@@ -82,40 +73,17 @@
                   </div>
                 </div>
               </div>
-              <div id="class-date-dropdown-list" class="dropdown-content">
-                <div>
-                  <input id="class-date-all" type="checkbox" name="class-date" value="all" />
-                  <label for="class-date-all">All</label>
-                </div>
-                <div>
-                  <input id="class-date-monday" type="checkbox" name="class-date" value="monday" />
-                  <label for="class-date-monday">จันทร์</label>
-                </div>
-                <div>
-                  <input id="class-date-tuesday" type="checkbox" name="class-date" value="tuesday" />
-                  <label for="class-date-tuesday">อังคาร</label>
-                </div>
-                <div>
-                  <input id="class-date-wednesday" type="checkbox" name="class-date" value="wednesday" />
-                  <label for="class-date-wednesday">พุธ</label>
-                </div>
-                <div>
-                  <input id="class-date-thursday" type="checkbox" name="class-date" value="thursday" />
-                  <label for="class-date-thursday">พฤหัสบดี</label>
-                </div>
-                <div>
-                  <input id="class-date-friday" type="checkbox" name="class-date" value="friday" />
-                  <label for="class-date-friday">ศุกร์</label>
-                </div>
-                <div>
-                  <input id="class-date-saturday" type="checkbox" name="class-date" value="saturday" />
-                  <label for="class-date-saturday">เสาร์</label>
-                </div>
-                <div>
-                  <input id="class-date-sunday" type="checkbox" name="class-date" value="sunday" />
-                  <label for="class-date-sunday">เสาร์</label>
-                </div>
-              </div>
+              <form id="class-date-dropdown-list" class="dropdown-content">
+                <checkbox-component-color label="All" name="class-date" value="all"></checkbox-component-color>
+                <checkbox-component-color label="จันทร์" name="class-date" value="monday"></checkbox-component-color>
+                <checkbox-component-color label="อังคาร" name="class-date" value="tuesday"></checkbox-component-color>
+                <checkbox-component-color label="พุธ" name="class-date" value="wednesday"></checkbox-component-color>
+                <checkbox-component-color label="พฤหัสบดี" name="class-date"
+                  value="thursday"></checkbox-component-color>
+                <checkbox-component-color label="ศุกร์" name="class-date" value="friday"></checkbox-component-color>
+                <checkbox-component-color label="เสาร์" name="class-date" value="saturday"></checkbox-component-color>
+                <checkbox-component-color label="อาทิตย์" name="class-date" value="sunday"></checkbox-component-color>
+              </form>
             </div>
             <div class="c6 table-header">Students</div>
             <div class="c7 table-header">Instructor</div>
@@ -145,6 +113,7 @@
   <script src="../components/SidebarComponent.js"></script>
   <script src="../js/ins-group-list.js"></script>
   <script src="../components/TableRow.js"></script>
+  <script src="../components/Checkbox.js"></script>
 </body>
 
 </html>
