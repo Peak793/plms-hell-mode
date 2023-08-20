@@ -37,8 +37,19 @@
   padding-right: 1rem;
 }
 .btn-common{
-  
+  background: #0CA6E9 !important;
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
 }
 .content{
   color: white;
+}
+
+.btn-view{
+  border-radius: 1.5rem;
+  border: 1px solid #0CA6E9;
+  background: var(--button, rgba(12, 166, 233, 0.40));
+  color: white;
+  padding-left: 10px;
+  padding-right: 10px;
 }
