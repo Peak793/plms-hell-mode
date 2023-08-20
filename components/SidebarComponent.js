@@ -76,12 +76,12 @@ class SidebarComponent extends HTMLElement {
               <nav id="nav">
                   <div class="logo-container d-flex justify-content-between overflow-hidden">
                       <div id="logo" class="d-none justify-content-center align-items-center">
-                          <div>
+                          <a href="/template/ins-group-list.html" class="a-no-style" >
                               <img id="plms-logo" src="../public/imgs/plms-logo.png" alt="plms-logo">
-                          </div>
-                          <p class="nav-text ">
+                          </a>
+                          <a href="/template/ins-group-list.html" class="nav-text a-no-style">
                               PROGRAMMING LAB <br> MANAGEMENT SYSTEM
-                          </p>
+                          </a>
                       </div>
                       <button class="reset-default-btn close-btn" aria-label="Close" >
                           <img src="../public/imgs/close-btn.png" alt="">

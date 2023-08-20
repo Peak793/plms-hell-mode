@@ -1,0 +1,101 @@
+body {
+  color: white !important;
+}
+
+.group-info-container {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+.group-info-box{
+  flex: 1;
+  justify-content: center ;
+  min-height: 163px;
+  padding: 20px;
+  background-color: #192C5B80;
+  display: flex;
+  flex-direction: column;
+  gap:10px;
+  border-radius: 8px;
+}
+
+.info-text, .info-value {
+  font-size: 16px;
+  line-height: 22.4px;
+}
+
+.info-text {
+  font-weight: 600;
+  color: #0CA6E9;
+}
+
+.info-value {
+  color: white;
+  font-weight: 400;
+}
+
+#group-class-date{
+  text-align: center;
+  width: fit-content;
+  padding: 2px 32px;
+  color: black;
+}
+
+.logout-student {
+  color: white;
+  display: flex;
+  padding: 4px 10px;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  border-radius: 6px;
+  border: 1px solid #0CA6E9;
+  gap:10px;
+  background-color: rgba(12, 166, 233, 0.40);
+  transition: all 0.2s ease-in-out;
+}
+
+.logout-student:hover {
+  background-color: hsla(198, 90%, 55%, 0.4);
+}
+
+.logout-student:active {
+  scale: 0.98;
+}
+
+.c2,.c3,.c6 {
+  flex: 1;
+}
+
+.c1 {
+  flex:4;
+}
+
+.c4,.c5 {
+  flex: 2;
+}
+
+.c2,.c3,.c4,.c5,.c6 {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+#chapter-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-wrap: nowrap;
+}
+
+.edit-btn {
+  display: flex;
+  padding: 7px 25px;
+  gap:10px;
+  border-radius: 8px;
+  background: #0CA6E9;
+  color: white;
+  align-items: center;
+}
+

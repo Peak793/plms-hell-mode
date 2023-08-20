@@ -1,3 +1,28 @@
 body {
   color: white !important;
 }
+
+.c1,.c2,.c3,.c4,.c6{
+  flex: 1;
+}
+
+
+.c5 {
+  flex: 3;
+}
+
+.c7{
+  flex:2.5;
+}
+
+.c1,.c2,.c3,.c4,.c5,.c6,.c7{
+  display: flex !important;
+  justify-content: center !important;
+}
+
+#group-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-wrap: nowrap;
+}

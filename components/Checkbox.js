@@ -74,7 +74,7 @@ class CheckboxComponentWithColor extends HTMLElement {
           <input 
             type="checkbox" 
             name="${this.getAttribute('name') || ''}" 
-            value="${this.getAttribute('value') || ''}" 
+            value="${this.getAttribute('value') || ''}"
           />
           <span class="checkmark"></span>
         </label>

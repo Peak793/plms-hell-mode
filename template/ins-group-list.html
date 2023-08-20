@@ -38,7 +38,7 @@
           My Groups
         </h5>
 
-        <div class="group-table">
+        <div class="table-container">
           <!-- Header -->
           <div class="table-head">
             <div class="c1 table-header">Group class</div>
@@ -55,7 +55,8 @@
                   </div>
                 </div>
               </div>
-              <form aria-label="semester" id="semester-dropdown-list" class="dropdown-content">
+              <form onchange="handleCheckedAll(event)" aria-label="semester" id="semester-dropdown-list"
+                class="dropdown-content">
                 <checkbox-component label="All" name="semester" value="all"></checkbox-component>
                 <checkbox-component label="1" name="semester" value="1"></checkbox-component>
                 <checkbox-component label="2" name="semester" value="2"></checkbox-component>
@@ -73,7 +74,7 @@
                   </div>
                 </div>
               </div>
-              <form id="class-date-dropdown-list" class="dropdown-content">
+              <form onchange="handleCheckedAll(event)" id="class-date-dropdown-list" class="dropdown-content">
                 <checkbox-component-color label="All" name="class-date" value="all"></checkbox-component-color>
                 <checkbox-component-color label="จันทร์" name="class-date" value="monday"></checkbox-component-color>
                 <checkbox-component-color label="อังคาร" name="class-date" value="tuesday"></checkbox-component-color>
@@ -88,25 +89,25 @@
             <div class="c6 table-header">Students</div>
             <div class="c7 table-header">Instructor</div>
           </div>
-
-          <!-- Data -->
-          <div id="group-list">
-            <table-row group-id="22020401" group="401" year="2022" semester="1" class-date="เสาร์, 09:00:00 - 12:00:00"
-              students="45" instructor="ชรินดา สนธิดี">
-            </table-row>
-            <table-row group-id="22020402" group="402" year="2022" semester="1" class-date="จันทร์, 09:00:00 - 12:00:00"
-              students="45" instructor="ชรินดา สนธิดี">
-            </table-row>
-            <table-row group-id="22020403" group="403" year="2022" semester="1" class-date="พุธ, 09:00:00 - 12:00:00"
-              students="45" instructor="ชรินดา สนธิดี">
-            </table-row>
-          </div>
-
         </div>
 
-      </section>
+        <!-- Data -->
+        <div id="group-list">
+          <table-row group-id="22020401" group="401" year="2022" semester="1" class-date="เสาร์, 09:00:00 - 12:00:00"
+            students="45" instructor="ชรินดา สนธิดี">
+          </table-row>
+          <table-row group-id="22020402" group="402" year="2022" semester="1" class-date="จันทร์, 09:00:00 - 12:00:00"
+            students="45" instructor="ชรินดา สนธิดี">
+          </table-row>
+          <table-row group-id="22020403" group="403" year="2022" semester="1" class-date="พุธ, 09:00:00 - 12:00:00"
+            students="45" instructor="ชรินดา สนธิดี">
+          </table-row>
+        </div>
 
     </div>
+
+    </section>
+
   </div>
 
   <script src="../lib/bootstrap/js/bootstrap.bundle.min.js"></script>

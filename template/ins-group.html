@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/ins-group.css">
+  <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css">
+  <title>Document</title>
+</head>
+
+<body class="d-flex">
+  <sidebar-component></sidebar-component>
+
+  <div class="content">
+    <div class="backdrop-dark"></div>
+
+    <div class="container py-4 gap-4 content d-flex flex-column">
+      <div class="greeting-container d-flex gap-2 justify-content-end align-items-center w-100">
+        <div class="greeting ">
+          <span>Hello,</span>
+          <br>
+          <span id="username">ชรินดา สนธิดี</span>
+        </div>
+        <img class="avatar-img" src="../public/imgs/avatar-placeholder.jfif" alt="avatar">
+      </div>
+
+      <nav class="w-100 bg-transparent p-0" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+        <ol class="breadcrumb m-0">
+          <li class="breadcrumb-item"><a class="bci" href="#">My Groups</a></li>
+          <li class="breadcrumb-item"><a class="bci" href="#">Test</a></li>
+        </ol>
+      </nav>
+
+      <section class="d-flex flex-column gap-2">
+        <h5 class="d-flex align-items-center gap-3">
+          <img src="../public/imgs/chart-logo.png" alt="chart-logo">
+          Group 401/1/2022
+        </h5>
+      </section>
+
+      <section class="group-info-container">
+        <div class="group-info-box">
+
+          <div class="d-flex gap-4">
+            <div class="d-flex gap-2">
+              <span class="info-text">Group ID</span>
+              <span id="group-id" class="info-value">22020402</span>
+            </div>
+            <div class="d-flex gap-2">
+              <span class="info-text">Group</span>
+              <span id="group" class="info-value">401</span>
+            </div>
+          </div>
+
+          <div class="d-flex gap-4">
+            <div class="d-flex gap-2">
+              <span class="info-text">Year</span>
+              <span id="group-year" class="info-value">2022</span>
+            </div>
+            <div class="d-flex gap-2">
+              <span class="info-text">Group</span>
+              <span id="group-semester" class="info-value">401</span>
+            </div>
+          </div>
+
+          <div>
+            <div class="d-flex gap-2">
+              <span class="info-text">Department</span>
+              <span id="department" class="info-value">Computer Engineering</span>
+            </div>
+          </div>
+
+          <div>
+            <div class="d-flex gap-2">
+              <span class="info-text">Instructor</span>
+              <span id="instructor" class="info-value">ชรินดา สนธิดี</span>
+            </div>
+          </div>
+
+        </div>
+        <div class="group-info-box">
+          <div class="d-flex flex-column gap-2">
+            <div class="info-text">Class date</div>
+            <div class="info-value date-range" id="group-class-date">
+              เสาร์, 09:00:00 - 12:00:00
+            </div>
+          </div>
+          <div class="d-flex gap-2">
+            <span class="info-text">Student</span>
+            <span class="info-value">45</span>
+          </div>
+          <div class="d-flex align-items-center justify-content-between gap-2">
+            <div class="d-flex gap-2">
+              <span class="info-text">Student online</span>
+              <span class="info-value">33</span>
+            </div>
+            <button class="logout-student">
+              <img src="../public/imgs/logout.png" alt="logout">
+              <span>Logout all student</span>
+            </button>
+          </div>
+        </div>
+        <div class="group-info-box">
+          <div class="d-flex gap-2 align-items-center">
+            <label for="allow-login" style="width: 130px; color: #0CA6E9; font-size: 16px; font-weight: 600;">Allow
+              login</label>
+            <label class="switch">
+              <input type="checkbox" id="allow-login" checked>
+              <span class="slider round"></span>
+            </label>
+          </div>
+          <div class="d-flex gap-2 align-items-center">
+            <label for="allow-upload-picture"
+              style="width: 130px; color: #0CA6E9; font-size: 16px; font-weight: 600;">Upload
+              picture</label>
+            <label class="switch">
+              <input type="checkbox" id="allow-upload-picture">
+              <span class="slider round"></span>
+            </label>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="table-container">
+          <div class="table-head">
+            <div class="c1 table-header">Group class</div>
+            <div class="c2 table-header">Items</div>
+            <div class="c3 table-header">Score</div>
+            <div class="c4 table-header">Acess exercise</div>
+            <div class="c5 table-header">Allow submit</div>
+            <div class="c6 table-header">Edit</div>
+          </div>
+          <div id="chapter-list">
+            <a class="a-no-style">
+              <div class="table-row">
+                <div class="c1"><span>1. Introduction</span></div>
+                <div class="c2">5</div>
+                <div class="c3">10</div>
+                <div class="c4">
+                  <label class="switch">
+                    <input type="checkbox" id="allow-access">
+                    <span class="slider round"></span>
+                  </label>
+                </div>
+                <div class="c5">
+                  <label class="switch">
+                    <input type="checkbox" id="allow-submit">
+                    <span class="slider round"></span>
+                  </label>
+                </div>
+                <div class="c6">
+                  <button class="edit-btn">
+                    <img src="../public/imgs/edit.png" alt="edit">
+                    <span>Edit</span>
+                  </button>
+                </div>
+              </div>
+            </a>
+            <a class="a-no-style">
+              <div class="table-row">
+                <div class="c1"><span>2. Variable Expression Statement</span></div>
+                <div class="c2">5</div>
+                <div class="c3">10</div>
+                <div class="c4">
+                  <label class="switch">
+                    <input type="checkbox" id="allow-access">
+                    <span class="slider round"></span>
+                  </label>
+                </div>
+                <div class="c5">
+                  <label class="switch">
+                    <input type="checkbox" id="allow-submit">
+                    <span class="slider round"></span>
+                  </label>
+                </div>
+                <div class="c6">
+                  <button class="edit-btn">
+                    <img src="../public/imgs/edit.png" alt="edit">
+                    <span>Edit</span>
+                  </button>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="">
+
+    </div>
+  </div>
+  <script src="../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/ins-group.js"></script>
+  <script src="../components/SidebarComponent.js"></script>
+</body>
+
+</html>

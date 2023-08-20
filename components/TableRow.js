@@ -27,17 +27,19 @@ class TableRowComponent extends HTMLElement {
 
   render() {
     this.innerHTML = `
-      <div class="table-row">
-          <div class="c1">${this.getAttribute('group-id') || ''}</div>
-          <div class="c2">${this.getAttribute('group') || ''}</div>
-          <div class="c3">${this.getAttribute('year') || ''}</div>
-          <div class="c4">${this.getAttribute('semester') || ''}</div>
-          <div class="c5 date-range" style="background-color:${this.color[this.getAttribute("class-date").split(",")[0]]}" >
-            ${this.getAttribute('class-date') || ''}
+      <a href="/template/ins-group.html?groupId=${this.getAttribute('group-id')}&group=${this.getAttribute('group')}" class="a-no-style" >
+          <div class="table-row" >
+            <div class="c1">${this.getAttribute('group-id') || ''}</div>
+            <div class="c2">${this.getAttribute('group') || ''}</div>
+            <div class="c3">${this.getAttribute('year') || ''}</div>
+            <div class="c4">${this.getAttribute('semester') || ''}</div>
+            <div class="c5 date-range" style="background-color:${this.color[(this.getAttribute("class-date") || "").split(",")[0]]}" >
+              ${this.getAttribute('class-date') || ''}
+            </div>
+            <div class="c6">${this.getAttribute('students') || ''}</div>
+            <div class="c7">${this.getAttribute('instructor') || ''}</div>
           </div>
-          <div class="c6">${this.getAttribute('students') || ''}</div>
-          <div class="c7">${this.getAttribute('instructor') || ''}</div>
-      </div>
+      </a>
     `;
   }
 }
